@@ -1,7 +1,7 @@
 (() => {
     // grab all the sections and destructure it into an array
     const sections = [...document.querySelectorAll('section')];
-    
+
     // map over them and store their id in a new array
     const ids = sections.map(section => section.id); // home
     const hrefs = ids.map(id => '#' + id);
@@ -9,7 +9,7 @@
     // one way...
     const links = hrefs.map(href => `<a href="${href}">${ // # home 
         href.substring(1)[0].toUpperCase() + href.substring(2)
-    }</a>`);
+        }</a>`);
 
     const subtitle = document.querySelector('#subtitle');
     subtitle.innerHTML = 'The best <em>company with the best</em> stuff';
@@ -33,6 +33,7 @@
     li.appendChild(link);
 
 
+    // console.log("section", sections);
 
 
     console.dir(sections);
